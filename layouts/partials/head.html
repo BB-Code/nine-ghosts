@@ -1,0 +1,21 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ .Site.Params.description | htmlEscape }}">
+    {{  $favicon := resources.Get "/img/favicon.ico" }}
+    <link rel="icon" type="image/x-icon" href="{{  $favicon.RelPermalink  }}">
+    {{ with $style := resources.Get "/scss/main.scss" | resources.ToCSS (dict "targetPath" "/css/style.css") }}
+    <link href="{{ $style.RelPermalink }}" rel="stylesheet">
+    {{ end }}
+
+</head>
+
+<title>
+   {{ if .IsHome }}
+     {{ .Site.Title | htmlEscape }}
+   {{ else if .Page.Title }}
+     {{ .Page.Title | htmlEscape }} | {{ .Site.Title | htmlEscape }}
+   {{ else }}
+     {{ .Site.Title | htmlEscape }}
+   {{ end }}
+</title> 
