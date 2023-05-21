@@ -1,0 +1,30 @@
+
+.nine-ghosts h1  {
+    text-align: center;
+}
+.nine-ghosts h1  a:hover {
+    text-decoration: none;
+}
+.nine-ghosts a {
+    text-decoration: none;
+    text-align: center;
+    padding-inline: 15px;
+}
+p > a{
+    padding-inline: 0px !important;
+}
+.header-link {
+    text-align: center;
+    font-size: 18px;
+}
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}  
+ header li {
+    display: inline;
+}
+.nine-ghosts a:hover {
+    text-decoration: underline #18aaaa 3px;
+}

@@ -1,4 +1,10 @@
 <footer class="footer">
-    <p><a href="https://gohugo.io">Nine Ghosts</a></p>
-    <p>Forkme on <a href="https://github.com/BB-Code/nine-ghosts">Github</a></p>
+    <p>Copyright © {{ .Site.Params.footerYear }} {{ .Site.Params.footerAuthor }}  {{ .Site.Params.footerICP }} </p>
+    <p><a href="https://gohugo.io">Nine Ghosts</a>
+        Forkme on <a href="https://github.com/BB-Code/nine-ghosts">Github</a>
+    </p>
 </footer>
+{{ $script_main := resources.Get "js/themeLoader.js" | minify | fingerprint }}
+<script src="{{ $script_main.RelPermalink }}"></script>
+{{ $theme := resources.Get "js/switchTheme.js" }}
+<script src="{{ $theme.Permalink }}"></script>

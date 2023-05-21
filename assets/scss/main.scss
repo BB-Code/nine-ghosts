@@ -1,2 +1,32 @@
+@import "/base";
 @import "/font";
 @import "/nineGhosts";
+@import "/header";
+@import "/avator";
+@import "/footer";
+@import "/blog";
+@import "/switch";
+@import "/dark";
+
+
+.container {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  @media (max-width: 750px) {
+    .container {
+      max-width: 100%;
+      padding: 15px;
+    }
+  }
+  @media (max-width: 767px) {
+    .container {
+      max-width: 100%;
+      padding: 10px;
+    }
+  }
+  

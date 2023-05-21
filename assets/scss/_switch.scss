@@ -1,0 +1,22 @@
+.mode-sunny {
+    display:none ;
+    line {
+      stroke: #f3f3f3;
+      fill: none;
+    }
+
+    circle {
+      fill: #f3f3f3;
+      stroke: #f3f3f3;
+    }
+  }
+  .mode-moon {
+    line {
+      stroke: #babdc4;
+      fill: #babdc4;
+    }
+    circle {
+      fill: none;
+      stroke: #babdc4;
+    }
+  }

@@ -1,0 +1,23 @@
+@mixin dark-mode {
+  body {
+    color: $dark-text-base-color;
+    background-color: $dark-bg;
+  }
+
+  a{
+    color: $dark-text-base-color;
+    &:hover{
+      color: $dark-text-link-active;
+    }
+  }
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+  html:not(.light) {
+    @include dark-mode()
+  }
+}
+
+

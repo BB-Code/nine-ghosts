@@ -1,0 +1,19 @@
+<header>
+    <div class="nine-ghosts">
+        {{ partial "avator.html" . }}
+     <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title  | htmlEscape }}</a></h1>
+    
+     <ul class="header-link">
+       {{ range .Site.Menus.main }}
+       <li><a class="link" href="{{ .URL | safeURL }}">{{ .Name | htmlEscape }}</a></li>
+       {{ end }}
+       <li>
+        <a id="mode" href="#">
+          {{ partial "svgs/sun.svg" (dict "height" 21 "width" 21 "class" "mode-sunny" "title" "LIGHT") . }}
+          {{ partial "svgs/sun.svg" (dict "height" 21 "width" 21 "class" "mode-moon" "title" "DARK") . }}
+        </a>
+       </li>
+     </ul>
+
+   </div>
+</header>

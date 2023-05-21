@@ -4,6 +4,13 @@
     <meta name="description" content="{{ .Site.Params.description | htmlEscape }}">
     {{  $favicon := resources.Get "/img/favicon.ico" }}
     <link rel="icon" type="image/x-icon" href="{{  $favicon.RelPermalink  }}">
+    {{   $fontawesome := resources.Get "/css/fontawesome.css" }}
+    <link href="{{ $fontawesome.RelPermalink }}" rel="stylesheet" >
+    {{   $iconTheme1 := resources.Get "/css/brands.css" }}
+    <link href="{{ $iconTheme1.RelPermalink }}" rel="stylesheet" >
+    <link href="{{ $fontawesome.RelPermalink }}" rel="stylesheet" >
+    {{   $iconTheme2 := resources.Get "/css/solid.css" }}
+    <link href="{{ $iconTheme2.RelPermalink }}" rel="stylesheet" >
     {{ with $style := resources.Get "/scss/main.scss" | resources.ToCSS (dict "targetPath" "/css/style.css") }}
     <link href="{{ $style.RelPermalink }}" rel="stylesheet">
     {{ end }}
@@ -11,6 +18,7 @@
 </head>
 
 <title>
+
    {{ if .IsHome }}
      {{ .Site.Title | htmlEscape }}
    {{ else if .Page.Title }}
@@ -19,3 +27,4 @@
      {{ .Site.Title | htmlEscape }}
    {{ end }}
 </title> 
+

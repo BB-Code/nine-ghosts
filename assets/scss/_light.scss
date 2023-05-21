@@ -1,0 +1,19 @@
+@mixin light-mode {
+    body {
+      color: $light-text-base-color;
+      background-color: $light-bg;
+    }
+  
+    a{
+      color: $light-text-base-color;
+      &:hover{
+        color: $light-text-link-active;
+      }
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    html:not(.dart) {
+      @include light-mode()
+    }
+  }
