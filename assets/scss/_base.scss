@@ -10,4 +10,48 @@ $dark-text-base-color: #babdc4;
 $dark-text-link: #cdcdcd;
 $dark-text-link-active: #18aaaa;
 
-$dark-bg: #0d122b;
+$dark-bg: #212121;
+
+///////////////// 3. Markdown Style /////////////////////////////
+
+h2 {
+    font-size: 1.3rem;
+    border-bottom: 2px solid #000000;
+    display: inline-block;
+    font-weight: bold;
+    background: #000000;
+    color: #ffffff;
+    padding: 3px 10px 1px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    margin-right: 3px;
+}
+/*表格*/
+ table {
+    display: table;
+    border-collapse: collapse;
+    text-align: left;
+  }
+   tbody {
+    border: 0;
+  }
+   table tr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    background-color: white;
+  }
+   table tr:nth-child(2n) {
+    background-color: #F8F8F8;
+  }
+   table tr th,
+   table tr td {
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    text-align: left;
+  }
+   table tr th {
+    font-weight: bold;
+    background-color: #f0f0f0;
+  }
+  
