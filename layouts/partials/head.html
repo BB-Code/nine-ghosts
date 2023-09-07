@@ -14,8 +14,10 @@
     {{ with $style := resources.Get "/scss/main.scss" | resources.ToCSS (dict "targetPath" "/css/style.css") }}
     <link href="{{ $style.RelPermalink }}" rel="stylesheet">
     {{ end }}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-light.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    {{   $highlightCSS := resources.Get "/css/atom-one-light.min.css" }}
+    <link rel="stylesheet" href="{{ $highlightCSS.RelPermalink }}">
+    {{ $highlightJS := resources.Get "js/highlight.min.js" }}
+    <script src="{{ $highlightJS.Permalink }}"></script>
     <script>hljs.highlightAll();</script>
 </head>
 
