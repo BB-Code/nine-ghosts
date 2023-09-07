@@ -13,48 +13,82 @@ $dark-text-link-active: #18aaaa;
 $dark-bg: #212121;
 
 ///////////////// 3. Markdown Style /////////////////////////////
+h1 {
+  text-align: center;
+  font-weight: bold;
+}
 
 h2 {
-    font-size: 1.3rem;
-    border-bottom: 2px solid #000000;
-    display: inline-block;
-    font-weight: bold;
-    background: #000000;
-    color: #ffffff;
-    padding: 3px 10px 1px;
-    border-top-right-radius: 3px;
-    border-top-left-radius: 3px;
-    margin-right: 3px;
+  margin: 1.2em 0 1em;
+  padding: 0px;
+  font-weight: bold;
+  color: black;
+  font-size: 1.3rem;
+  border-bottom: 2px solid rgb(239, 112, 96);
+
 }
+
+h2:after {
+  display: inline-block;
+  content: "";
+  vertical-align: bottom;
+  border-bottom: 1.25rem solid #efebe9;
+  border-right: 1.25rem solid transparent;
+}
+
+h2 span {
+  display: inline-block;
+  font-weight: bold;
+  background: rgb(239, 112, 96);
+  color: #ffffff;
+  padding: 3px 10px 1px;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  margin-right: 0px;
+}
+
 /*表格*/
- table {
-    display: table;
-    border-collapse: collapse;
-    text-align: left;
-  }
-   tbody {
-    border: 0;
-  }
-   table tr {
-    border: 0;
-    border-top: 1px solid #ccc;
-    background-color: white;
-  }
-   table tr:nth-child(2n) {
-    background-color: #F8F8F8;
-  }
-   table tr th,
-   table tr td {
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    padding: 5px 10px;
-    text-align: left;
-  }
-   table tr th {
-    font-weight: bold;
-    background-color: #f0f0f0;
-  }
+table {
+  display: table;
+  border-collapse: collapse;
   
-  p code{
-    color: rgb(239, 112, 96);
-  }
+}
+
+tbody {
+  border: 0;
+}
+
+table tr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  background-color: white;
+}
+
+table tr:nth-child(2n) {
+  background-color: #F8F8F8;
+}
+
+table tr th,
+table tr td {
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+
+}
+
+table tr th {
+  font-weight: bold;
+  background-color: #f0f0f0;
+}
+
+p code {
+  color: rgb(239, 112, 96);
+}
+.prev-page,.next-page{
+  border: 1px dashed;
+  padding: 7px;
+  border-radius: 4px;
+}
+article p{
+  text-indent: 2rem;
+}

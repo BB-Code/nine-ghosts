@@ -1,17 +1,19 @@
 {{ define "main" }}
 <div class="blog container">
-   <div class="head-blog">
-    <h2>文章</h2>
-   </div>
+    <div class="head-blog">
+        <h1></h1>
+    </div>
 
-<ul class="article-list">
-{{ range (.Paginate .Pages).Pages }}
-<li class="post">      
-    <span>{{ dateFormat "2006-01-02" .Date }} </span> 
-    <a class="blog-title" href="{{ .RelPermalink | safeURL }}">{{.Title | htmlEscape }}</a>
-</li>
-{{ end }}
- </ul>
+    <ul class="article-list">
+        {{ range (.Paginate .Pages).Pages }}
+        <li class="post">
+            <h3><span style="font-size: 12px;">{{ dateFormat "2006-01-02" .Date }} </span> &nbsp;&nbsp;<a class="blog-title" href="{{ .RelPermalink | safeURL }}">{{.Title | htmlEscape }}</a>
+               
+                </h3>
+            
+        </li>
+        {{ end }}
+    </ul>
 </div>
 {{ partial "paginate.html" . }}
 {{ end }}

@@ -1,10 +1,11 @@
 {{ define "main" }}
-	<div class="staticpage">
-		<article>
-			<h2 class="head-blog">{{ .Title }}</h2>
-			<div>
-				{{ .Content }}
-			</div>
-		</article>
-	</div>
+<div class="container">
+	<article>
+		<div>
+			{{ $modifiedContent := replaceRE "<h2(.*?)>" "<h2$1><span>" .Content }}
+						{{ $modifiedContent := replaceRE "</h2>" "</span></h2>" $modifiedContent }}
+					{{ $modifiedContent | safeHTML }}
+		</div>
+	</article>
+</div>
 {{ end }}

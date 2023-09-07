@@ -1,13 +1,17 @@
 {{ define "main" }}
 <div class="container">
-		<article>
-			<h1 class="head-blog">{{ .Title }}</h1>
-			<div class="time">{{ dateFormat "2006-01-02" .Date }}</div>
-			<div>
-				{{ .Content }}
-			</div>
+	<article>
+		<!-- <h1>
+			{{ .Title }}
+		</h1>
+		<div class="time">{{ dateFormat "2006-01-02" .Date }}</div> -->
+		<div>
+			{{ $modifiedContent := replaceRE "<h2(.*?)>" "<h2$1><span>" .Content }}
+						{{ $modifiedContent := replaceRE "</h2>" "</span></h2>" $modifiedContent }}
+					{{ $modifiedContent | safeHTML }}
+		</div>
 
-		</article>
-	</div>
-	{{ partial "posts.html" .}}
+	</article>
+</div>
+{{ partial "posts.html" .}}
 {{ end }}
