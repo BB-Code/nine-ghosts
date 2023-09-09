@@ -1,0 +1,11 @@
+.anime-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 760px;
+}
+.anime-item{
+    width: 250px;
+    height: 350px;
+}

@@ -5,7 +5,7 @@
     </div>
 
     <ul class="article-list">
-        {{ range (.Paginate .Pages).Pages }}
+        {{ range .Pages }}
         <li class="post">
             <h3><span style="font-size: 12px;">{{ dateFormat "2006-01-02" .Date }} </span> &nbsp;&nbsp;<a class="blog-title" href="{{ .RelPermalink | safeURL }}">{{.Title | htmlEscape }}</a>
                
