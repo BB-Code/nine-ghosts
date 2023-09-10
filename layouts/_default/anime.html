@@ -1,9 +1,11 @@
 {{ define "main" }}
 <div class="container">
-	<div class="anime-wrapper">
-        <div class="anime-item">
-                {{.Content}}
-        </div>
-	</div>
+	<article>
+                <div>
+			{{ $modifiedContent := replaceRE "<h2(.*?)>" "<h2$1><span>" .Content }}
+						{{ $modifiedContent := replaceRE "</h2>" "</span></h2>" $modifiedContent }}
+					{{ $modifiedContent | safeHTML }}
+		</div>
+        </article>
 </div>
 {{ end }}
